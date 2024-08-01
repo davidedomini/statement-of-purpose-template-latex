@@ -1,0 +1,106 @@
+%%
+% NYU Modern Formal Color Letterhead
+% LaTeX Template
+% Jan 2024
+%
+% Adapted from NYU letter Microsoft Word template
+% and Chris Hoofnagle's Berkeley letter template
+% https://www.overleaf.com/latex/templates/berkeley-2020-letterhead-4-color-formal-version/ryrsfvdsztpq
+% License: faculty and staff of New York University are free to use this template
+%%
+
+\documentclass[12pt,letterpaper]{letter} %this controls the paper style and font size
+\usepackage{graphicx} % necessary for logos
+\usepackage{lipsum} %you can delete this
+\usepackage{parskip} % for spacing
+\usepackage{geometry} % so that page 2> have 1" margins
+\usepackage{fancyhdr} % for fancy headers
+\usepackage{lastpage} 
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{} % footer for pages 2 on
+\lfoot{\footnotesize {\textit{Letter from \Who{} regarding ...}}} % Left footer
+\cfoot{} % Change for center footer
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % Right footer page #s 
+\renewcommand{\footrulewidth}{0pt}
+
+
+%load NYU monsterrat font
+
+\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+%Sender Information -- Edit this to fill in the header
+\def\Who{Davide Domini} % Fill in your name here
+\def\Title{PhD Student} % Your title
+\def\Where{University of Bologna} % Your department/institution
+\def\Address{Via dell'Università} % Your address
+\def\CityZip{Cesena, IT, 47521} % Your city, zip code, country, etc
+\def\Email{E-mail: davide.domini@unibo.it} % Your email address
+%\def\TEL{Phone: } % Your phone number
+%\def\TELM{Mobile: } % Do you dare put your mobile here? How about a fax?
+%\def\URL{https://*.nyu.edu} % Your URL
+
+%first page margins are different to accommodate the letterhead
+
+\topmargin=-1.1in % Moves the top margin; here it is a negative value to move the text up
+\textheight=9.5in % Total text height for this page
+\oddsidemargin=-10pt % Left margin; widened here with a negative value
+\textwidth=7in % Text width
+\let\raggedleft\raggedright % Makes the date appear on the left
+
+\begin{document}
+
+\begin{letter}{\textbf{RE:} Travel Grant Application for DisCoTec 2024}
+
+
+
+\begin{center}
+
+\begin{picture}(1000,1)
+    \put(0, 0){\includegraphics[width=0.15\textwidth]{images/unibo-logo.png}}
+    \put(200,33){\textbf{\footnotesize \Who }}
+    \put(200,22){\footnotesize \Title }
+    \put(200,11){\footnotesize \Where }
+    \put(350,33){\footnotesize \Address }
+    \put(350,22){\footnotesize \CityZip }
+    %\put(350,11){\footnotesize \TEL }
+    %\put(350,0){\footnotesize \TELM } % Comment this out to omit your mobile
+    \put(350,11){\footnotesize \Email }
+    %\put(350,-22){\footnotesize \URL }
+    %\put(0,-28){\rule{\textwidth}{0.4pt}}
+\end{picture}
+\end{center}
+\vspace{10mm}
+
+\opening{Dear Members of the Grant Committee of DisCoTec,}
+I am writing you to apply for the Travel Grant to support my attendance at the International Federated Conference on Distributed Computing Techniques (DisCoTec 2024), which will be in Groningen. As a PhD Student in the fields of artificial intelligence and field-based coordination, I believe that attending this conference would be an excellent opportunity for personal growth and would greatly contribute to my ongoing research. Additionally, it would allow me to become a member of the DisCoTec community, providing me with valuable feedback on my work and enabling me to connect with researchers in related fields.
+%
+
+Last year, I submitted a tool paper to the COORDINATION conference, namely \emph{ScaRLib: A Framework for Cooperative Many Agent Reinforcement Learning in Scala}, and throughout my research, I often use tools produced by the DAIS community, such as \emph{Alchemist}. Furthermore, this year I submitted a regular paper again to the COORDINATION conference, namely \emph{Field-based Coordination For Federated Learning}. Hence, I believe it would be a great added value to be able to discuss my work with other researchers who will be coming to Groningen.
+%
+
+For these reasons, recognized the great value of the conference for my career and for enforcing my connection, I humbly request your support in the form of a travel grant to enable my participation at DisCoTec. Your assistance would alleviate the financial burden and  and enable me to make the most of this valuable opportunity. I am committed to maximizing the impact of this grant and pledge to actively participate in all relevant conference activities, contribute actively to discussion, and submit a detailed report summarizing the key takeaways and insights gained during the conference. 
+%
+
+I appreciate the time and consideration given to my application.
+
+
+\closing{Sincerely,
+
+\textbf{\emph{\Who{}}}
+}
+% \includegraphics[]{} You can put an image of your signature here.
+
+
+% \ps{P.S. Fiat Lux}
+
+% \cc{Carbon Copy 1\\Carbon Copy 2}
+
+% \encl{Memorandum} %for enclosures
+
+\end{letter}
+
+\end{document}
